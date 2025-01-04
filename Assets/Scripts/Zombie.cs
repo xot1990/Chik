@@ -36,7 +36,7 @@ public class Zombie : MonoBehaviour
          objectPlacer = FindObjectOfType<ObjectPlacer>();
          if (objectPlacer == null)
          {
-            Debug.LogError("Не найден ObjectPlacer в сцене!");
+            Debug.LogError("Не найден ObjectPlacer в сценеqq!");
              enabled = false;
          }
         placedPlants = objectPlacer.GetComponent<ObjectPlacer>().placedPlants;
