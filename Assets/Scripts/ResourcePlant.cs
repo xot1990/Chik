@@ -27,6 +27,7 @@ public class ResourcePlant : Plant
     {
         float resource = currentResource;
         currentResource = 0;
+        ResourceManager.AddReactives(resource);
         return resource;
     }
 
