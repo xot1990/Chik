@@ -1,8 +1,15 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
-public abstract class Plant : MonoBehaviour
+public class Plant : MonoBehaviour
 {
     public float health = 100f;
+    public float sellCost = 10f;
+    public LayerMask zombieLayer;
+    protected GridManager gridManager;
+    protected ObjectPlacer objectPlacer;
+    protected Animator anima;
     void OnEnable()
     {
         EventBus.OnPlantDamaged += TakeDamageEvent;
@@ -11,17 +18,37 @@ public abstract class Plant : MonoBehaviour
     {
         EventBus.OnPlantDamaged -= TakeDamageEvent;
     }
-    public virtual void TakeDamage(float damage)
+    void Awake()
     {
-        EventBus.RaiseOnPlantDamaged(gameObject, damage);
-        if (health <= 0)
+        anima = GetComponent<Animator>();
+        OnAwake();
+    }
+    protected virtual void OnAwake()
+    {
+        gridManager = FindObjectOfType<GridManager>();
+        if (gridManager == null)
         {
-            Die();
+            Debug.LogError("Не найден GridManager в сцене!");
+            enabled = false;
         }
+        objectPlacer = FindObjectOfType<ObjectPlacer>();
+        if (objectPlacer == null)
+        {
+            Debug.LogError("Не найден ObjectPlacer в сцене!");
+            enabled = false;
+        }
+    }
+    protected virtual void Update()
+    {
+        Attack();
+    }
+    public virtual void Attack()
+    {
+        Debug.Log("Plant Attack");
     }
     public virtual void TakeDamageEvent(GameObject plant, float damage)
     {
-        if(plant == gameObject)
+        if (plant == gameObject)
         {
             health -= damage;
             if (health <= 0)
@@ -30,11 +57,38 @@ public abstract class Plant : MonoBehaviour
             }
         }
     }
-    protected virtual void Die()
+    public virtual void OnLevelEnd()
     {
-        EventBus.RaiseOnPlantSold(gameObject);
         Destroy(gameObject);
     }
 
-    public abstract void OnLevelEnd(); // Абстрактный метод для очистки при окончании уровня
+    protected virtual void Die()
+    {
+        (int x, int y) gridPosition = gridManager.GetGridPosition(transform.position);
+         if (objectPlacer.placedPlants.ContainsKey(gridPosition))
+         {
+             objectPlacer.placedPlants.Remove(gridPosition);
+         }
+        Destroy(gameObject);
+    }
+    protected bool IsTargetInCellRange(Vector3 targetPosition)
+    {
+        (int x, int y) targetGridPosition = gridManager.GetGridPosition(targetPosition);
+        (int x, int y) selfGridPosition = gridManager.GetGridPosition(transform.position);
+         return Mathf.Abs(targetGridPosition.x - selfGridPosition.x) <= 1 && Mathf.Abs(targetGridPosition.y - selfGridPosition.y) <= 1;
+    }
+     protected List<GameObject> GetZombiesInArea(float radius)
+    {
+        List<GameObject> zombies = new List<GameObject>();
+         float worldRadius = radius * gridManager.cellSize;
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, worldRadius, zombieLayer);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.GetComponent<Zombie>() != null)
+            {
+                zombies.Add(collider.gameObject);
+            }
+        }
+         return zombies;
+    }
 }

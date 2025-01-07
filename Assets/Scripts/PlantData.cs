@@ -6,5 +6,6 @@ public class PlantData : ScriptableObject
     public string plantName;
     public GameObject plantPrefab;
     public float placementCost;
+    public float reactivePlacementCost; // Добавили новое поле
     public float sellCost;
 }

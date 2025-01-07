@@ -8,17 +8,24 @@ public class ZombieSpawner : MonoBehaviour
     private List<WaveData> waves;
     private int currentWaveIndex;
     private bool isSpawning = false;
+    private Coroutine currentSpawnCoroutine;
 
     void OnEnable()
     {
-        EventBus.OnWaveEnd += StartNextWave;
+        EventBus.OnWaveEnd += HandleWaveEnd;
         EventBus.OnWaveStart += HandleWaveStart;
     }
+
     void OnDisable()
     {
-        EventBus.OnWaveEnd -= StartNextWave;
+        EventBus.OnWaveEnd -= HandleWaveEnd;
         EventBus.OnWaveStart -= HandleWaveStart;
+        if (currentSpawnCoroutine != null)
+        {
+            StopCoroutine(currentSpawnCoroutine);
+        }
     }
+
     void Start()
     {
         if (spawnPoint == null)
@@ -27,6 +34,7 @@ public class ZombieSpawner : MonoBehaviour
             enabled = false;
         }
     }
+
     public void SetWaveData(List<WaveData> waveData)
     {
         waves = waveData;
@@ -36,7 +44,9 @@ public class ZombieSpawner : MonoBehaviour
     public void StartSpawning()
     {
         isSpawning = true;
+        StartNextWave();
     }
+
 
     public void StartNextWave()
     {
@@ -45,31 +55,34 @@ public class ZombieSpawner : MonoBehaviour
         if (currentWaveIndex + 1 >= waves.Count)
         {
             Debug.Log("Все волны пройдены!");
-            EventBus.RaiseOnWaveEnd();
-            isSpawning = false;
+             isSpawning = false;
+             EventBus.RaiseOnWaveEnd(); // Вызываем событие окончания уровня
             return;
         }
 
         currentWaveIndex++;
         WaveData waveData = waves[currentWaveIndex];
-        StartCoroutine(SpawnWave(waveData));
-        EventBus.RaiseOnWaveStart();
+        if (currentSpawnCoroutine != null)
+        {
+             StopCoroutine(currentSpawnCoroutine);
+        }
+         currentSpawnCoroutine = StartCoroutine(SpawnWave(waveData));
+
+         EventBus.RaiseOnWaveStart();
     }
 
     IEnumerator SpawnWave(WaveData waveData)
     {
-
-        for (int i = 0; i < waveData.zombieCount; i++)
+       for (int i = 0; i < waveData.zombieCount; i++)
         {
             SpawnZombie(waveData.zombiePrefab);
             yield return new WaitForSeconds(waveData.zombieSpawnDelay);
         }
-        EventBus.RaiseOnWaveEnd();
+        currentSpawnCoroutine = null;
+         EventBus.RaiseOnWaveEnd();
+
     }
-    private void HandleWaveStart()
-    {
-        Debug.Log("Начало волны!");
-    }
+
     private void SpawnZombie(GameObject zombiePrefab)
     {
         if (zombiePrefab == null)
@@ -77,6 +90,17 @@ public class ZombieSpawner : MonoBehaviour
             Debug.LogError("Префаб зомби не указан!");
             return;
         }
-        Instantiate(zombiePrefab, spawnPoint.position, Quaternion.identity);
+         Instantiate(zombiePrefab, spawnPoint.position, Quaternion.identity);
     }
+   private void HandleWaveEnd()
+    {
+          if(isSpawning) {
+                 StartNextWave();
+             }
+       }
+
+     private void HandleWaveStart()
+       {
+           Debug.Log("Начало волны!");
+       }
 }

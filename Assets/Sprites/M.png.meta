@@ -1,0 +1,1640 @@
+fileFormatVersion: 2
+guid: 8534d07aa3670fb408c4a3770ec179e5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5485409619972592240
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_0
+  - first:
+      213: 3644208644900085383
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_1
+  - first:
+      213: -8349569716847904811
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_2
+  - first:
+      213: -453716250021860203
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_3
+  - first:
+      213: -6597120879376419549
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_4
+  - first:
+      213: -2608919936226116719
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_5
+  - first:
+      213: -4545935661802491880
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_6
+  - first:
+      213: 6542689652204319723
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_7
+  - first:
+      213: -2923311116253582742
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_8
+  - first:
+      213: -8697626077412912950
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_9
+  - first:
+      213: -2852141849873013795
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_10
+  - first:
+      213: 3590837124451500469
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_11
+  - first:
+      213: -1019560322473110282
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_12
+  - first:
+      213: -9071913449984571309
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_13
+  - first:
+      213: -6039860779414986380
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_14
+  - first:
+      213: 5953405500996491193
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_15
+  - first:
+      213: -3146927403333254534
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_16
+  - first:
+      213: 1868471350325504335
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_17
+  - first:
+      213: 5271818985074271993
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_18
+  - first:
+      213: -6423546162106651350
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_19
+  - first:
+      213: -215505997147950967
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_20
+  - first:
+      213: -2277049916163452647
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_21
+  - first:
+      213: 6440386943940810802
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_22
+  - first:
+      213: -3120664354210021076
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_23
+  - first:
+      213: -7220971794169412487
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_24
+  - first:
+      213: -1277702800067800527
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_25
+  - first:
+      213: 6381733461996711857
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_26
+  - first:
+      213: -3742237306052861034
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_27
+  - first:
+      213: -4004254918851364925
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_28
+  - first:
+      213: 6071769400197848775
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_29
+  - first:
+      213: -3235065792669132352
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_30
+  - first:
+      213: 2484832087306919213
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_31
+  - first:
+      213: 5683737790832946722
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_32
+  - first:
+      213: 1143581053338276572
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_33
+  - first:
+      213: -6687665349467375079
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_34
+  - first:
+      213: -7183711316218908092
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_35
+  - first:
+      213: -4381642687908978958
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_36
+  - first:
+      213: 4292293612003766035
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_37
+  - first:
+      213: -6961384122507756659
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_38
+  - first:
+      213: -4089771743901930261
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_39
+  - first:
+      213: -5964111392407967306
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_40
+  - first:
+      213: 2647215374514920138
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_41
+  - first:
+      213: -8757136459938005965
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_42
+  - first:
+      213: 2786212591971417690
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_43
+  - first:
+      213: -9184463147913482109
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_44
+  - first:
+      213: -3190600128882660374
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_45
+  - first:
+      213: -7267208390318923205
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_46
+  - first:
+      213: 8366141215760019183
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_47
+  - first:
+      213: 2164792020915145084
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_48
+  - first:
+      213: -7329187078067160836
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_49
+  - first:
+      213: -5844354584848471797
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_50
+  - first:
+      213: 8294184361229284819
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_51
+  - first:
+      213: -1004048670737156942
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_52
+  - first:
+      213: -5431838667186974476
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_53
+  - first:
+      213: 5730616317487506411
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_54
+  - first:
+      213: 2174608713290068167
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_55
+  - first:
+      213: -5446428136647092737
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_56
+  - first:
+      213: -6201589858928643501
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_57
+  - first:
+      213: -6701274885196119957
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_58
+  - first:
+      213: 6179224776679329090
+    second: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_59
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_0
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 65
+        width: 731
+        height: 875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09de50a7309efd3b0800000000000000
+      internalID: -5485409619972592240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_1
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 905
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e5da66474d29230800000000000000
+      internalID: 3644208644900085383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_2
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 937
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d7fbe7949e502c80800000000000000
+      internalID: -8349569716847904811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_3
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 839
+        width: 28
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59cef98797314b9f0800000000000000
+      internalID: -453716250021860203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_4
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 745
+        width: 90
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 325b47463815274a0800000000000000
+      internalID: -6597120879376419549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_5
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 833
+        width: 14
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19bbec104214bcbd0800000000000000
+      internalID: -2608919936226116719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_6
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 782
+        width: 67
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8107b7ad99799e0c0800000000000000
+      internalID: -4545935661802491880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_7
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 766
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be33343f29d4cca50800000000000000
+      internalID: 6542689652204319723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_8
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 615
+        width: 71
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6a21c337005e67d0800000000000000
+      internalID: -2923311116253582742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_9
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 650
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac011a22a23db4780800000000000000
+      internalID: -8697626077412912950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_10
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 646
+        width: 48
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd32b4d49182b68d0800000000000000
+      internalID: -2852141849873013795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_11
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 584
+        width: 67
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b18731f65735d130800000000000000
+      internalID: 3590837124451500469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_12
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 611
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f458efd94bc9d1f0800000000000000
+      internalID: -1019560322473110282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_13
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 586
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 358c49448c61a1280800000000000000
+      internalID: -9071913449984571309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_14
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 578
+        width: 41
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 471e7262f9a1e2ca0800000000000000
+      internalID: -6039860779414986380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_15
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 458
+        width: 100
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b790cab2cebe9250800000000000000
+      internalID: 5953405500996491193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_16
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 532
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a720166233ed354d0800000000000000
+      internalID: -3146927403333254534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_17
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 511
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4965252bc42ee910800000000000000
+      internalID: 1868471350325504335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_18
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 539
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f623858f63492940800000000000000
+      internalID: 5271818985074271993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_19
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 518
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2d2f498ccafad6a0800000000000000
+      internalID: -6423546162106651350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_20
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 511
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 980b709ff6e520df0800000000000000
+      internalID: -215505997147950967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_21
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 462
+        width: 38
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9119e336a2b4660e0800000000000000
+      internalID: -2277049916163452647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_22
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 509
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 238d7a98dc9d06950800000000000000
+      internalID: 6440386943940810802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_23
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 512
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c218618cd4c21b4d0800000000000000
+      internalID: -3120664354210021076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_24
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 510
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 974ca6b5964f9cb90800000000000000
+      internalID: -7220971794169412487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_25
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 491
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132df69a210b44ee0800000000000000
+      internalID: -1277702800067800527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_26
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 477
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bfa98595c8709850800000000000000
+      internalID: 6381733461996711857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_27
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 476
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69321835ff6e01cc0800000000000000
+      internalID: -3742237306052861034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_28
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 452
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c7f0c3ed570e68c0800000000000000
+      internalID: -4004254918851364925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_29
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 453
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ce11e09912434450800000000000000
+      internalID: 6071769400197848775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_30
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 450
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c950fa3dccba13d0800000000000000
+      internalID: -3235065792669132352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_31
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 433
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2ddb624e95eb7220800000000000000
+      internalID: 2484832087306919213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_32
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 435
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22eaf033861b0ee40800000000000000
+      internalID: 5683737790832946722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_33
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 442
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd25818b8e0dedf00800000000000000
+      internalID: 1143581053338276572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_34
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 410
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91afe442cc3a033a0800000000000000
+      internalID: -6687665349467375079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_35
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 431
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44271db6e945e4c90800000000000000
+      internalID: -7183711316218908092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_36
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 419
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fe5f76b0374133c0800000000000000
+      internalID: -4381642687908978958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_37
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 422
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31fa92f6c4a419b30800000000000000
+      internalID: 4292293612003766035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_38
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 416
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8b71e80602346f90800000000000000
+      internalID: -6961384122507756659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_39
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 407
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: becab4874463e37c0800000000000000
+      internalID: -4089771743901930261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_40
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 398
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b9a9aea9483b3da0800000000000000
+      internalID: -5964111392407967306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_41
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 404
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca1ae98b5cccb420800000000000000
+      internalID: 2647215374514920138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_42
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 392
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33cf5c779c6687680800000000000000
+      internalID: -8757136459938005965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_43
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 403
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5e3d25279d9aa620800000000000000
+      internalID: 2786212591971417690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_44
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 386
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38073f7ad6b3a8080800000000000000
+      internalID: -9184463147913482109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_45
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 392
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeb22a95616b8b3d0800000000000000
+      internalID: -3190600128882660374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_46
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 384
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b326d4ae870b52b90800000000000000
+      internalID: -7267208390318923205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_47
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 363
+        width: 15
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fee612a2c118a1470800000000000000
+      internalID: 8366141215760019183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_48
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 383
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c794f3b9fd2ea0e10800000000000000
+      internalID: 2164792020915145084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_49
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 340
+        width: 41
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf87c672f2f794a90800000000000000
+      internalID: -7329187078067160836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_50
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 370
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b096ea4487ea4eea0800000000000000
+      internalID: -5844354584848471797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_51
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 371
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d5fba86bbcda1370800000000000000
+      internalID: 8294184361229284819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_52
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 331
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b4328bbd07e012f0800000000000000
+      internalID: -1004048670737156942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_53
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 355
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f0d615e28b3e94b0800000000000000
+      internalID: -5431838667186974476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_54
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 344
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be366ebbd2d378f40800000000000000
+      internalID: 5730616317487506411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_55
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 299
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c0bf196a13cd2e10800000000000000
+      internalID: 2174608713290068167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_56
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 293
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff5157457766a64b0800000000000000
+      internalID: -5446428136647092737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_57
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 171
+        width: 69
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 352b4e771e68fe9a0800000000000000
+      internalID: -6201589858928643501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_58
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 222
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6083ad2ff94003a0800000000000000
+      internalID: -6701274885196119957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_59
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 128
+        width: 87
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24d8349023401c550800000000000000
+      internalID: 6179224776679329090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_0: -5485409619972592240
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_1: 3644208644900085383
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_10: -2852141849873013795
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_11: 3590837124451500469
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_12: -1019560322473110282
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_13: -9071913449984571309
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_14: -6039860779414986380
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_15: 5953405500996491193
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_16: -3146927403333254534
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_17: 1868471350325504335
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_18: 5271818985074271993
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_19: -6423546162106651350
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_2: -8349569716847904811
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_20: -215505997147950967
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_21: -2277049916163452647
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_22: 6440386943940810802
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_23: -3120664354210021076
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_24: -7220971794169412487
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_25: -1277702800067800527
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_26: 6381733461996711857
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_27: -3742237306052861034
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_28: -4004254918851364925
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_29: 6071769400197848775
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_3: -453716250021860203
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_30: -3235065792669132352
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_31: 2484832087306919213
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_32: 5683737790832946722
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_33: 1143581053338276572
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_34: -6687665349467375079
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_35: -7183711316218908092
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_36: -4381642687908978958
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_37: 4292293612003766035
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_38: -6961384122507756659
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_39: -4089771743901930261
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_4: -6597120879376419549
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_40: -5964111392407967306
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_41: 2647215374514920138
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_42: -8757136459938005965
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_43: 2786212591971417690
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_44: -9184463147913482109
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_45: -3190600128882660374
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_46: -7267208390318923205
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_47: 8366141215760019183
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_48: 2164792020915145084
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_49: -7329187078067160836
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_5: -2608919936226116719
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_50: -5844354584848471797
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_51: 8294184361229284819
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_52: -1004048670737156942
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_53: -5431838667186974476
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_54: 5730616317487506411
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_55: 2174608713290068167
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_56: -5446428136647092737
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_57: -6201589858928643501
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_58: -6701274885196119957
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_59: 6179224776679329090
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_6: -4545935661802491880
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_7: 6542689652204319723
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_8: -2923311116253582742
+      vled997_music_icon_cartoon_style_green_colors_white_backgroun_002663e0-df40-42d4-b14c-af8b66640576_1_9: -8697626077412912950
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

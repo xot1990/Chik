@@ -64,7 +64,6 @@ public class GameManager : MonoBehaviour
             enabled = false;
         }
         gameState = GameState.MainMenu;
-        StartGame();
     }
 
     public void StartGame()

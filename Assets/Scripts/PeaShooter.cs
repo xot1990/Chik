@@ -1,45 +1,85 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class PeaShooter : Plant
 {
-    public float attackDamage = 20f;
-    public float attackRange = 1.0f;
-    public float attackCooldown = 1.5f;
-    public Transform firePoint;
     public GameObject projectilePrefab;
+    public Transform projectileSpawnPoint;
+    public float attackRange;
+    public float projectileSpeed = 20f;
+    public float attackCooldown = 1f;
+    public float attackDamage = 10f;
     private float lastAttackTime;
-    public LayerMask enemyLayers;
-
-    void Update()
+    private LineRenderer attackRangeLineRenderer;
+    private GameObject closestZombie;
+    protected override void OnAwake()
     {
-        if (Time.time - lastAttackTime >= attackCooldown)
-        {
-            Attack();
-            lastAttackTime = Time.time;
-        }
-    }
-    void Attack()
+         base.OnAwake();
+        attackRangeLineRenderer = gameObject.AddComponent<LineRenderer>();
+        attackRangeLineRenderer.startWidth = 0.1f;
+        attackRangeLineRenderer.endWidth = 0.1f;
+         attackRangeLineRenderer.material = new Material(Shader.Find("Sprites/Default"));
+        attackRangeLineRenderer.startColor = Color.yellow;
+         attackRangeLineRenderer.endColor = Color.yellow;
+       attackRangeLineRenderer.positionCount = 0;
+     }
+    public override void Attack()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackRange, enemyLayers);
-
-        foreach (var hitCollider in hitColliders)
+          if (Time.time - lastAttackTime > attackCooldown)
         {
-            if (hitColliders.Length > 0) {
-                GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-
-                Projectile projectileComponent = projectile.GetComponent<Projectile>();
-                if (projectileComponent != null)
-                {
-                    projectileComponent.SetTarget(hitCollider.transform);
-                }
-
+           DrawAttackArea();
+           List<GameObject> zombiesInRange = GetZombiesInArea(attackRange);
+           closestZombie = GetClosestZombie(zombiesInRange);
+            ClearAttackArea();
+           if (closestZombie != null)
+            {
+                 anima.Play("Attack");
+                lastAttackTime = Time.time;
             }
+         }
+     }
+     private GameObject GetClosestZombie(List<GameObject> zombies)
+    {
+        if (zombies == null || zombies.Count == 0) return null;
+          return zombies[0];
+     }
+    private void ShootProjectile()
+     {
+        if (projectilePrefab == null || projectileSpawnPoint == null) return;
+        GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, Quaternion.identity);
+        Projectile projectileComponent = projectile.GetComponent<Projectile>();
+         if (projectileComponent != null)
+         {
+            projectileComponent.SetTarget(closestZombie.transform);
+            projectileComponent.SetDamage(attackDamage);
+           projectileComponent.SetSpeed(projectileSpeed);
+         }
+    }
+    private void DrawAttackArea()
+    {
+        int segments = 360;
+        attackRangeLineRenderer.positionCount = segments + 1;
+       float radius = attackRange * gridManager.cellSize; // Radius in world units
 
+       for (int i = 0; i <= segments; i++)
+        {
+           float angle = i * Mathf.Deg2Rad * (360f / segments);
+            Vector3 position = transform.position + new Vector3(radius * Mathf.Cos(angle), radius * Mathf.Sin(angle), 0);
+           attackRangeLineRenderer.SetPosition(i, position);
+        }
+     }
+    private void ClearAttackArea()
+    {
+         attackRangeLineRenderer.positionCount = 0;
+     }
+   protected override void Die()
+    {
+        base.Die();
+         (int x, int y) gridPosition = gridManager.GetGridPosition(transform.position);
+         if (objectPlacer.placedPlants.ContainsKey(gridPosition))
+         {
+             objectPlacer.placedPlants.Remove(gridPosition);
         }
     }
-    public override void OnLevelEnd()
-    {
-        Destroy(gameObject);
-    }
-
 }

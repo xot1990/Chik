@@ -1,134 +1,161 @@
+using System;
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class Zombie : MonoBehaviour
 {
-    public float speed = 1.0f;
+     public float speed = 1.0f;
     public float attackDamage = 10f;
     public float attackCooldown = 1.0f;
-    public float health = 100f;
+     public float health = 100f;
     public float finishLine = 0f;
+     public float attackRange = 1.0f; // Радиус атаки зомби (в клетках)
     private Transform farmer;
     private float lastAttackTime;
     private bool reachedFinish = false;
-
+   private bool isAttacking = false;
+    private GameObject currentPlantTarget;
     private Dictionary<(int, int), GameObject> placedPlants;
     private GridManager gridManager;
     private ObjectPlacer objectPlacer;
+    private Animator anima;
 
-      void OnEnable()
+    public LayerMask plantLayer;
+   void OnEnable()
     {
-        EventBus.OnZombieDamaged += TakeDamageEvent;
-          EventBus.OnZombieDied += HandleZombieDied;
-     }
+         EventBus.OnZombieDamaged += TakeDamageEvent;
+        EventBus.OnZombieDied += HandleZombieDied;
+    }
     void OnDisable()
     {
-        EventBus.OnZombieDamaged -= TakeDamageEvent;
+         EventBus.OnZombieDamaged -= TakeDamageEvent;
          EventBus.OnZombieDied -= HandleZombieDied;
     }
+
+    private void Awake()
+    {
+     anima = GetComponent<Animator>();
+    }
+
     void Start()
     {
-        farmer = GameObject.FindGameObjectWithTag("Farmer").transform;
+         farmer = GameObject.FindGameObjectWithTag("Farmer").transform;
         if (farmer == null)
         {
             Debug.LogError("Не найден фермер с тегом 'Farmer' в сцене!");
             enabled = false;
         }
         gridManager = FindObjectOfType<GridManager>();
-        if (gridManager == null)
+       if (gridManager == null)
         {
-            Debug.LogError("Не найден GridManager в сцене!");
+           Debug.LogError("Не найден GridManager в сцене!");
             enabled = false;
-        }
+       }
         objectPlacer = FindObjectOfType<ObjectPlacer>();
-        if (objectPlacer == null)
-        {
+       if (objectPlacer == null)
+       {
             Debug.LogError("Не найден ObjectPlacer в сцене!");
             enabled = false;
-        }
+       }
         placedPlants = objectPlacer.GetComponent<ObjectPlacer>().placedPlants;
-        finishLine = farmer.transform.position.x;
+         finishLine = farmer.transform.position.y;
     }
-
-    void Update()
+     void Update()
     {
-        if (farmer == null) return;
-        Vector3 moveDirection = new Vector3(finishLine - transform.position.x, 0, 0);
-        transform.Translate(moveDirection.normalized * speed * Time.deltaTime);
-        if (transform.position.x <= finishLine)
+       if (farmer == null) return;
+        if (!isAttacking)
         {
-            reachedFinish = true;
-        }
-    }
+           Vector3 moveDirection = new Vector3(0, finishLine - transform.position.y, 0);
+           transform.Translate(moveDirection.normalized * speed * Time.deltaTime);
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Plant"))
-        {
-            (int x, int y) gridPosition = gridManager.GetGridPosition(transform.position);
-            if (placedPlants.ContainsKey(gridPosition))
+          if (transform.position.y <= finishLine)
             {
-                AttackPlant(placedPlants[gridPosition]);
-                return;
+               reachedFinish = true;
+             }
+          CheckForPlant();
+        }
+    }
+    void CheckForPlant()
+    {
+       if (isAttacking) return;
+
+       Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, attackRange * gridManager.cellSize, plantLayer);
+
+        if (colliders.Length > 0)
+       {
+            foreach(var collider in colliders)
+             {
+                 if (collider.GetComponent<Plant>() != null)
+                {
+                  AttackPlant(collider.gameObject);
+                   return;
+                }
             }
-        }
-        if (other.CompareTag("Farmer") && reachedFinish)
-        {
-            AttackFarmer(other.gameObject);
-            return;
-        }
+         }
     }
 
     void AttackFarmer(GameObject target)
-    {
+   {
         Debug.Log("Атака фермера");
-        EventBus.RaiseOnGameOver();
+         EventBus.RaiseOnGameOver();
         Die();
     }
-
     void AttackPlant(GameObject target)
-    {
-        if (Time.time - lastAttackTime > attackCooldown)
+   {
+       if (!isAttacking)
         {
-            Plant plant = target.GetComponent<Plant>();
-            if (plant != null)
-            {
-                plant.TakeDamage(attackDamage);
-                lastAttackTime = Time.time;
-            }
-            if (target == null)
-            {
-                (int x, int y) gridPosition = gridManager.GetGridPosition(transform.position);
-                placedPlants.Remove(gridPosition);
-            }
+           isAttacking = true;
+           currentPlantTarget = target;
+           StartCoroutine(AttackRoutine(target));
         }
+   }
+   IEnumerator AttackRoutine(GameObject target)
+     {
+         while (target != null && currentPlantTarget == target)
+        {
+            if (Time.time - lastAttackTime > attackCooldown)
+            {
+                 Plant plant = target.GetComponent<Plant>();
+                if (plant != null)
+               {
+                    plant.TakeDamageEvent(plant.gameObject, attackDamage);
+                    lastAttackTime = Time.time;
+                    anima.Play("Attack");
+                }
+           }
+            yield return null;
+         }
+       isAttacking = false;
+       anima.Play("Run");
+      currentPlantTarget = null;
     }
-      public void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
         EventBus.RaiseOnZombieDamaged(gameObject, damage);
-          if (health <= 0)
-            {
-                Die();
-            }
+         if (health <= 0)
+        {
+            Die();
+        }
     }
-     public virtual void TakeDamageEvent(GameObject zombie, float damage)
-    {
-         if(zombie == gameObject)
+    public virtual void TakeDamageEvent(GameObject zombie, float damage)
+   {
+       if (zombie == gameObject)
+        {
+            health -= damage;
+           if (health <= 0)
             {
-             health -= damage;
-               if (health <= 0)
-                 {
-                     Die();
-                  }
+               Die();
             }
+        }
     }
-      void HandleZombieDied(GameObject zombie)
+   void HandleZombieDied(GameObject zombie)
     {
-          if(zombie == gameObject)
-          {
-                Debug.Log("Зомби погиб");
-          }
+        if (zombie == gameObject)
+       {
+            Debug.Log("Зомби погиб");
+        }
     }
     void Die()
     {
@@ -137,21 +164,21 @@ public class Zombie : MonoBehaviour
         if (reachedFinish)
         {
             EndLevel(false);
-        }
+         }
     }
 
     public void EndLevel(bool win)
-    {
-          EventBus.RaiseOnLevelEnd(win);
-          if (win)
+   {
+        EventBus.RaiseOnLevelEnd(win);
+        if (win)
          {
             Debug.Log("Уровень пройден!");
-        }
+         }
         else
-         {
-            Debug.Log("Уровень не пройден!");
+        {
+           Debug.Log("Уровень не пройден!");
         }
-        ObjectPlacer objectPlacer = FindObjectOfType<ObjectPlacer>();
-        objectPlacer.EndLevel();
-    }
+       ObjectPlacer objectPlacer = FindObjectOfType<ObjectPlacer>();
+       objectPlacer.EndLevel();
+   }
 }
