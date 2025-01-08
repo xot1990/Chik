@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39f5d43d6462b46ba2b9d5a5fadb7a, type: 3}
   m_Name: Meelee
   m_EditorClassIdentifier: 
-  plantName: MeeleeChiken
+  plantName: MeeleeChiken 1
   plantPrefab: {fileID: 4025552601918548647, guid: 0fb97270e09fa324ba48e0c7e5138bb3, type: 3}
   placementCost: 5
+  reactivePlacementCost: 0
   sellCost: 3
+  sellCostReact: 0
+  Icon: {fileID: 21300000, guid: e6b2cc41fcdc1284a9b048787b16a8b5, type: 3}

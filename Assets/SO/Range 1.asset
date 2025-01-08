@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a39f5d43d6462b46ba2b9d5a5fadb7a, type: 3}
+  m_Name: Range 1
+  m_EditorClassIdentifier: 
+  plantName: RangeChiken 2
+  plantPrefab: {fileID: 4025552601918548647, guid: 9bdd1940565e8944f814eba26da06461, type: 3}
+  placementCost: 30
+  reactivePlacementCost: 10
+  sellCost: 15
+  sellCostReact: 5
+  Icon: {fileID: 21300000, guid: 7fcde9c2a4fa232459a2416a99c4a101, type: 3}

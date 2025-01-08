@@ -49,7 +49,7 @@ public class PeaShooter : Plant
         if (projectilePrefab == null || projectileSpawnPoint == null) return;
         GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, Quaternion.identity);
         Projectile projectileComponent = projectile.GetComponent<Projectile>();
-         if (projectileComponent != null)
+         if (projectileComponent != null && closestZombie != null)
          {
             projectileComponent.SetTarget(closestZombie.transform);
             projectileComponent.SetDamage(attackDamage);

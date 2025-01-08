@@ -9,13 +9,15 @@ public class ObjectPlacer : MonoBehaviour
     public float startSun = 100f;
     public float startReactives = 100f;
     public List<PlantData> plantDataList = new List<PlantData>();
+    public List<PlantData> allPlantDataList = new List<PlantData>();
     public Transform plantMenuParent;
     public GameObject plantButtonPrefab;
+    public GameObject sellButtonPrefab;
+    public GameObject upgradeButtonPrefab;
     public TMP_Text sunText;
     public TMP_Text reactiveText;
     public GameObject restartButtonPrefab;
     public GameObject endButtonPrefab;
-    public Transform buttonsParent;
     public LayerMask plantLayers;
     public LayerMask uiLayers;
     public GameObject notEnoughResourcesPanel;
@@ -32,12 +34,16 @@ public class ObjectPlacer : MonoBehaviour
 
     private GameObject restartButton;
     private GameObject endButton;
+
+    public AudioSource source;
+    
     void OnEnable()
     {
         EventBus.OnSunChange += UpdateSunText;
         EventBus.OnReactiveChange += UpdateReactiveText;
         EventBus.OnPlantPlaced += HandlePlantPlaced;
         EventBus.OnPlantSold += HandlePlantSold;
+        EventBus.OnGameExit += ExitGame;
     }
 
     void OnDisable()
@@ -46,11 +52,12 @@ public class ObjectPlacer : MonoBehaviour
         EventBus.OnReactiveChange -= UpdateReactiveText;
         EventBus.OnPlantPlaced -= HandlePlantPlaced;
         EventBus.OnPlantSold -= HandlePlantSold;
+        EventBus.OnGameExit -= ExitGame;
     }
 
     void Start()
     {
-        ResourceManager.InitializeResources(startSun, startReactives);
+        
         gridManager = FindObjectOfType<GridManager>();
         if (gridManager == null)
         {
@@ -63,11 +70,7 @@ public class ObjectPlacer : MonoBehaviour
             Debug.LogError("Не найден Transform для меню растений!");
             enabled = false;
         }
-        if (buttonsParent == null)
-        {
-            Debug.LogError("Не найден Transform для кнопок управления!");
-            enabled = false;
-        }
+        
 
         plantMenu = new GameObject("PlantMenu");
         plantMenu.transform.SetParent(plantMenuParent);
@@ -106,19 +109,14 @@ public class ObjectPlacer : MonoBehaviour
         {
             UpdateReactiveText(ResourceManager.Reactives);
         }
-        restartButton = Instantiate(restartButtonPrefab, buttonsParent);
-        Button restartButtonComponent = restartButton.GetComponent<Button>();
-        restartButtonComponent.onClick.AddListener(RestartLevel);
-
-        endButton = Instantiate(endButtonPrefab, buttonsParent);
-        Button endButtonComponent = endButton.GetComponent<Button>();
-        endButtonComponent.onClick.AddListener(EndLevel);
     }
     void CreatePlantMenuButtons()
     {
           foreach (var plantData in plantDataList)
         {
             GameObject button = Instantiate(plantButtonPrefab, plantMenu.transform);
+            Transform IconButton = button.transform.Find("Icon");
+            Image icon = IconButton.GetComponent<Image>();
             Button buttonComponent = button.GetComponent<Button>();
 
             Transform textContainer = button.transform.Find("TextContainer");
@@ -134,6 +132,10 @@ public class ObjectPlacer : MonoBehaviour
             Transform reactTextTransform = reactCost.Find("Text");
             TMP_Text reactCostText = reactTextTransform.GetComponent<TMP_Text>();
 
+            if (icon)
+            {
+                icon.sprite = plantData.Icon;
+            }
             if (plantNameText)
             {
                 plantNameText.text = plantData.plantName;
@@ -192,7 +194,7 @@ public class ObjectPlacer : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, uiLayers);
         if (hit.collider != null)
         {
-            if (hit.collider.CompareTag("PlantButton"))
+            if (hit.collider.CompareTag("PlantButton") || hit.collider.CompareTag("Farmer")|| hit.collider.CompareTag("Exit"))
             {
                 return;
             }
@@ -231,6 +233,7 @@ public class ObjectPlacer : MonoBehaviour
     void OpenPlantMenu()
     {
         CloseMenu();
+        CreatePlantMenuButtons();
          plantMenu.transform.position = placementPosition;
          plantMenu.SetActive(true);
         foreach (var button in plantButtons)
@@ -241,15 +244,80 @@ public class ObjectPlacer : MonoBehaviour
      void OpenSellMenu()
     {
          CloseMenu();
-         GameObject sellButton = Instantiate(plantButtonPrefab, plantMenu.transform);
-         Button sellButtonComponent = sellButton.GetComponent<Button>();
-         TMP_Text sellTextComponent = sellButton.GetComponentInChildren<TMP_Text>();
-         if (sellTextComponent)
+         GameObject button = Instantiate(sellButtonPrefab, plantMenu.transform);
+         Button sellButtonComponent = button.GetComponent<Button>();
+         
+         Transform textContainer = button.transform.Find("TextContainer");
+         Transform plantName = textContainer.Find("PlantNameText");
+         TMP_Text plantNameText = plantName.GetComponent<TMP_Text>();
+
+         Transform costContainer = button.transform.Find("CostContainer");
+         Transform sunCost = costContainer.Find("SunCost");
+         Transform sunTextTransform = sunCost.Find("Text");
+         TMP_Text sunCostText = sunTextTransform.GetComponent<TMP_Text>();
+
+         Transform reactCost = costContainer.Find("ReactCost");
+         Transform reactTextTransform = reactCost.Find("Text");
+         TMP_Text reactCostText = reactTextTransform.GetComponent<TMP_Text>();
+
+         if (plantNameText)
          {
-             sellTextComponent.text = "Sell Plant";
-        }
+             plantNameText.text = "Sell";
+         }
+         if (sunCostText)
+         {
+             sunCostText.text = allPlantDataList.Find(x => x.plantName == placedPlants[selectedCell].GetComponent<Plant>().Name).sellCost.ToString();
+         }
+         if (reactCostText)
+         {
+             reactCostText.text = allPlantDataList.Find(x => x.plantName == placedPlants[selectedCell].GetComponent<Plant>().Name).sellCostReact.ToString();
+         }
+         
          sellButtonComponent.onClick.AddListener(SellPlant);
           plantMenu.transform.position = placementPosition;
+          plantButtons.Add(button);
+          
+          if(placedPlants[selectedCell].GetComponent<Plant>().NextLevelTir != null)
+          {
+              GameObject Ubutton = Instantiate(upgradeButtonPrefab, plantMenu.transform);
+              Button UsellButtonComponent = Ubutton.GetComponent<Button>();
+
+              Transform UtextContainer = Ubutton.transform.Find("TextContainer");
+              Transform UplantName = UtextContainer.Find("PlantNameText");
+              TMP_Text UplantNameText = UplantName.GetComponent<TMP_Text>();
+
+              Transform UcostContainer = Ubutton.transform.Find("CostContainer");
+              Transform UsunCost = UcostContainer.Find("SunCost");
+              Transform UsunTextTransform = UsunCost.Find("Text");
+              TMP_Text UsunCostText = UsunTextTransform.GetComponent<TMP_Text>();
+
+              Transform UreactCost = UcostContainer.Find("ReactCost");
+              Transform UreactTextTransform = UreactCost.Find("Text");
+              TMP_Text UreactCostText = UreactTextTransform.GetComponent<TMP_Text>();
+
+              if (UplantNameText)
+              {
+                  UplantNameText.text = "UpGrade";
+              }
+
+              if (UsunCostText)
+              {
+                  UsunCostText.text = allPlantDataList.Find(x => x == placedPlants[selectedCell].GetComponent<Plant>().NextLevelTir)
+                      .placementCost.ToString();
+              }
+
+              if (UreactCostText)
+              {
+                  UreactCostText.text = allPlantDataList.Find(x => x == placedPlants[selectedCell].GetComponent<Plant>().NextLevelTir)
+                      .reactivePlacementCost
+                      .ToString();
+              }
+
+              UsellButtonComponent.onClick.AddListener(UpgradePlant);
+              plantMenu.transform.position = placementPosition;
+              plantButtons.Add(Ubutton);
+          }
+          
          plantMenu.SetActive(true);
     }
 
@@ -259,12 +327,36 @@ public class ObjectPlacer : MonoBehaviour
         {
             GameObject plant = placedPlants[selectedCell];
            EventBus.RaiseOnPlantSold(plant);
-            ResourceManager.AddSun(plantDataList.Find(x => x.plantPrefab == placedPlants[selectedCell].gameObject).sellCost);
+            ResourceManager.AddSun(allPlantDataList.Find(x => x.plantName == placedPlants[selectedCell].GetComponent<Plant>().Name).sellCost);
+            ResourceManager.AddReactives(allPlantDataList.Find(x => x.plantName == placedPlants[selectedCell].GetComponent<Plant>().Name).sellCostReact);
             Destroy(placedPlants[selectedCell]);
              placedPlants.Remove(selectedCell);
               CloseMenu();
         }
      }
+
+    void UpgradePlant()
+    {
+        if (placedPlants.ContainsKey(selectedCell))
+        {
+            Plant plant = placedPlants[selectedCell].GetComponent<Plant>();
+            
+            if (ResourceManager.TrySpendSun(plant.NextLevelTir.placementCost) && ResourceManager.TrySpendReactives(plant.NextLevelTir.reactivePlacementCost))
+            {
+                Destroy(placedPlants[selectedCell]);
+                placedPlants.Remove(selectedCell);
+                selectedPlant = plant.NextLevelTir;
+                PlacePlant();
+                Debug.Log($"Выбрано растение: {plant.NextLevelTir.plantName}");
+            }
+            else
+            {
+                notEnoughResourcesPanel.SetActive(true);
+                Invoke("HideNotification", 1f);
+            }
+            CloseMenu();
+        }
+    }
       void HandlePlantPlaced(GameObject plant, Vector3 position)
       {
            Debug.Log("Растение размещено!");
@@ -283,6 +375,7 @@ public class ObjectPlacer : MonoBehaviour
 
        if (!placedPlants.ContainsKey(menuCell))
         {
+            source.Play();
              GameObject plant = Instantiate(selectedPlant.plantPrefab, placementPosition, Quaternion.identity);
             placedPlants.Add(menuCell, plant);
              EventBus.RaiseOnPlantPlaced(plant, placementPosition);
@@ -302,16 +395,17 @@ public class ObjectPlacer : MonoBehaviour
         plantMenu.SetActive(false);
         foreach (var button in plantButtons)
         {
-           button.SetActive(false);
+           Destroy(button.gameObject);
         }
+        plantButtons.Clear();
     }
      void UpdateSunText(float sun)
     {
-        sunText.text = $"Sun: {sun}";
+        sunText.text = $" {sun}";
     }
     void UpdateReactiveText(float reactive)
     {
-        reactiveText.text = $"Reactives: {reactive}";
+        reactiveText.text = $" {reactive}";
     }
      public void RestartLevel()
     {
@@ -336,7 +430,18 @@ public class ObjectPlacer : MonoBehaviour
            }
         }
          placedPlants.Clear();
-          EventBus.RaiseOnLevelEnd(true);
          Debug.Log("Уровень окончен");
+    }
+
+    private void ExitGame()
+    {
+        foreach (var plant in placedPlants.Values)
+        {
+            if (plant != null)
+            {
+                plant.GetComponent<Plant>().OnLevelEnd();
+            }
+        }
+        placedPlants.Clear();
     }
 }

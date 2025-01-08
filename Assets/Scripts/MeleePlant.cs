@@ -17,6 +17,7 @@ public class MeleePlant : Plant
             {
                 if (IsTargetInCellRange(zombie.transform.position))
                 {
+                    anima.Play("MeleeAttack");
                     zombie.GetComponent<Zombie>().TakeDamage(attackDamage);
                     lastAttackTime = Time.time;
                 }

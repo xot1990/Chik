@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class Zombie : MonoBehaviour
 {
@@ -20,17 +21,21 @@ public class Zombie : MonoBehaviour
     private GridManager gridManager;
     private ObjectPlacer objectPlacer;
     private Animator anima;
+    public TMP_Text tooltype;
+    public Canvas canvas;
 
     public LayerMask plantLayer;
    void OnEnable()
     {
          EventBus.OnZombieDamaged += TakeDamageEvent;
         EventBus.OnZombieDied += HandleZombieDied;
+        EventBus.OnGameExit += ExitGame;
     }
     void OnDisable()
     {
          EventBus.OnZombieDamaged -= TakeDamageEvent;
          EventBus.OnZombieDied -= HandleZombieDied;
+         EventBus.OnGameExit -= ExitGame;
     }
 
     private void Awake()
@@ -133,7 +138,9 @@ public class Zombie : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
-        EventBus.RaiseOnZombieDamaged(gameObject, damage);
+        TMP_Text T = Instantiate(tooltype, transform.position, Quaternion.identity,canvas.transform);
+        T.text = damage.ToString();
+        T.color = Color.red;
          if (health <= 0)
         {
             Die();
@@ -180,5 +187,10 @@ public class Zombie : MonoBehaviour
         }
        ObjectPlacer objectPlacer = FindObjectOfType<ObjectPlacer>();
        objectPlacer.EndLevel();
+   }
+
+   public void ExitGame()
+   {
+    Destroy(gameObject);
    }
 }

@@ -1,15 +1,20 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class Plant : MonoBehaviour
 {
+    public string Name;
     public float health = 100f;
     public float sellCost = 10f;
     public LayerMask zombieLayer;
     protected GridManager gridManager;
     protected ObjectPlacer objectPlacer;
     protected Animator anima;
+    public PlantData NextLevelTir;
+    public TMP_Text tooltype;
+    public Canvas canvas;
     void OnEnable()
     {
         EventBus.OnPlantDamaged += TakeDamageEvent;
@@ -50,6 +55,9 @@ public class Plant : MonoBehaviour
     {
         if (plant == gameObject)
         {
+            TMP_Text T = Instantiate(tooltype, transform.position, Quaternion.identity,canvas.transform);
+            T.text = damage.ToString();
+            T.color = Color.red;
             health -= damage;
             if (health <= 0)
             {
@@ -59,7 +67,8 @@ public class Plant : MonoBehaviour
     }
     public virtual void OnLevelEnd()
     {
-        Destroy(gameObject);
+        if(!transform.CompareTag("Farmer"))
+            Destroy(gameObject);
     }
 
     protected virtual void Die()

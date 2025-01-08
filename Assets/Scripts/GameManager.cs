@@ -21,6 +21,10 @@ public class GameManager : MonoBehaviour
     private ObjectPlacer objectPlacer;
     private ZombieSpawner zombieSpawner;
 
+    public GameObject Win;
+    public GameObject Lose;
+    public Planlhouse house;
+
     void OnEnable()
     {
         EventBus.OnLevelEnd += OnLevelEnd;
@@ -75,6 +79,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadLevel(int levelIndex)
     {
+        house.health = 100;
         if (levelIndex < 0 || levelIndex >= levels.Count)
         {
             Debug.LogError("Уровень не найден!");
@@ -83,16 +88,15 @@ public class GameManager : MonoBehaviour
         objectPlacer.RestartLevel();
         currentLevel = levelIndex;
         LevelData currentLevelData = levels[levelIndex];
-
+        ResourceManager.InitializeResources(currentLevelData.sun, currentLevelData.rect);
         zombieSpawner.SetWaveData(currentLevelData.waves);
-        zombieSpawner.StartSpawning();
         StartCoroutine(StartFirstWave(currentLevelData.waveStartDelay));
     }
 
     IEnumerator StartFirstWave(float delay)
     {
         yield return new WaitForSeconds(delay);
-        zombieSpawner.StartNextWave();
+        zombieSpawner.StartSpawning();
     }
 
     private void OnLevelEnd(bool win)
@@ -110,9 +114,11 @@ public class GameManager : MonoBehaviour
     public void LevelComplete()
     {
         gameState = GameState.LevelComplete;
-        Debug.Log("Уровень пройден");
+        
+        PlayerPrefs.SetInt("LVL" + (currentLevel + 2) + "Open",1);
         objectPlacer.EndLevel();
-        StartCoroutine(NextLevel());
+        Win.SetActive(true);
+        //StartCoroutine(NextLevel());
     }
 
     IEnumerator NextLevel()
@@ -127,12 +133,18 @@ public class GameManager : MonoBehaviour
         }
         StartGame();
     }
+
+    public void ExitGame()
+    {
+        EventBus.RaiseOnGameExit();
+        StopAllCoroutines();
+    }
       private void HandleGameOver()
     {
          gameState = GameState.GameOver;
         Debug.Log("Игра окончена");
-       objectPlacer.EndLevel();
-         EventBus.RaiseOnGameOver();
+        objectPlacer.EndLevel();
+        Lose.SetActive(true);
     }
     private void HandleLevelRestart()
     {
@@ -160,6 +172,8 @@ public class LevelData
 {
     public List<WaveData> waves;
     public float waveStartDelay;
+    public float sun;
+    public float rect;
 }
 
 [System.Serializable]

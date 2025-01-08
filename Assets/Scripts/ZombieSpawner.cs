@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class ZombieSpawner : MonoBehaviour
 {
-    public Transform spawnPoint;
+    public List<Transform> spawnPoints;
     private List<WaveData> waves;
     private int currentWaveIndex;
     private bool isSpawning = false;
     private Coroutine currentSpawnCoroutine;
+    
+    private bool waveEnd;
+    private int currentZombieCount;
 
     void OnEnable()
     {
         EventBus.OnWaveEnd += HandleWaveEnd;
         EventBus.OnWaveStart += HandleWaveStart;
+        EventBus.OnZombieDied += CheckWin;
+        EventBus.OnGameExit += ExitGame;
     }
 
     void OnDisable()
     {
         EventBus.OnWaveEnd -= HandleWaveEnd;
         EventBus.OnWaveStart -= HandleWaveStart;
+        EventBus.OnZombieDied -= CheckWin;
+        EventBus.OnGameExit -= ExitGame;
         if (currentSpawnCoroutine != null)
         {
             StopCoroutine(currentSpawnCoroutine);
@@ -28,11 +35,16 @@ public class ZombieSpawner : MonoBehaviour
 
     void Start()
     {
-        if (spawnPoint == null)
-        {
-            Debug.LogError("Не найдена точка спавна!");
-            enabled = false;
-        }
+        
+    }
+
+    public void ExitGame()
+    {
+        waveEnd = false;
+        isSpawning = false;
+        if(currentSpawnCoroutine != null)
+            StopCoroutine(currentSpawnCoroutine);
+        currentZombieCount = 0;
     }
 
     public void SetWaveData(List<WaveData> waveData)
@@ -43,6 +55,7 @@ public class ZombieSpawner : MonoBehaviour
 
     public void StartSpawning()
     {
+        waveEnd = false;
         isSpawning = true;
         StartNextWave();
     }
@@ -55,6 +68,7 @@ public class ZombieSpawner : MonoBehaviour
         if (currentWaveIndex + 1 >= waves.Count)
         {
             Debug.Log("Все волны пройдены!");
+            waveEnd = true;
              isSpawning = false;
              EventBus.RaiseOnWaveEnd(); // Вызываем событие окончания уровня
             return;
@@ -83,6 +97,14 @@ public class ZombieSpawner : MonoBehaviour
 
     }
 
+    private void CheckWin(GameObject gameObject)
+    {
+        currentZombieCount--;
+        
+        if (currentZombieCount <= 0 && waveEnd)
+            EventBus.RaiseOnLevelEnd(true);
+    }
+
     private void SpawnZombie(GameObject zombiePrefab)
     {
         if (zombiePrefab == null)
@@ -90,7 +112,8 @@ public class ZombieSpawner : MonoBehaviour
             Debug.LogError("Префаб зомби не указан!");
             return;
         }
-         Instantiate(zombiePrefab, spawnPoint.position, Quaternion.identity);
+         Instantiate(zombiePrefab, spawnPoints[Random.Range(0,spawnPoints.Count)].position, Quaternion.identity);
+         currentZombieCount++;
     }
    private void HandleWaveEnd()
     {

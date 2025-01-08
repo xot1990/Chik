@@ -8,4 +8,6 @@ public class PlantData : ScriptableObject
     public float placementCost;
     public float reactivePlacementCost; // Добавили новое поле
     public float sellCost;
+    public float sellCostReact;
+    public Sprite Icon;
 }

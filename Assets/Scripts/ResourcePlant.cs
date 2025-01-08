@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class ResourcePlant : Plant
@@ -6,6 +7,8 @@ public class ResourcePlant : Plant
     public float generationInterval = 10f;
     private float lastGenerationTime;
     private float currentResource = 0;
+    public TMP_Text resourseText;
+    
     void Start()
     {
         lastGenerationTime = Time.time;
@@ -14,9 +17,12 @@ public class ResourcePlant : Plant
     {
         if (Time.time - lastGenerationTime >= generationInterval)
         {
-            currentResource += resourceGenerationRate;
+            anima.Play("Pik");
+            ResourceManager.AddReactives(resourceGenerationRate);
             lastGenerationTime = Time.time;
-            Debug.Log($"ResourcePlant generated {resourceGenerationRate} resource points. Current Resource: {currentResource}");
+            TMP_Text T = Instantiate(resourseText, transform.position, Quaternion.identity,canvas.transform);
+            T.text = "+" + resourceGenerationRate;
+            T.color = Color.white;
         }
     }
     public override void OnLevelEnd()

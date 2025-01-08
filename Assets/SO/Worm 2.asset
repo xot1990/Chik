@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a39f5d43d6462b46ba2b9d5a5fadb7a, type: 3}
+  m_Name: Worm 2
+  m_EditorClassIdentifier: 
+  plantName: WormHunter 3
+  plantPrefab: {fileID: 4025552601918548647, guid: 3ade0d4259017dc4bbb8223da5ce1420, type: 3}
+  placementCost: 100
+  reactivePlacementCost: 30
+  sellCost: 50
+  sellCostReact: 15
+  Icon: {fileID: 21300000, guid: b011601439c10f741862ca38f3503eeb, type: 3}

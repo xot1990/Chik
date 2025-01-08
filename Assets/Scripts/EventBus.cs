@@ -83,6 +83,12 @@ public static class EventBus
     {
           OnGameStart?.Invoke();
     }
+      
+    public static event Action OnGameExit;
+    public static void RaiseOnGameExit()
+    {
+        OnGameExit?.Invoke();
+    }
 
      // Событие для перезапуска уровня
     public static event Action OnLevelRestart;

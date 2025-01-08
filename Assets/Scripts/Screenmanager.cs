@@ -16,4 +16,36 @@ public class Screenmanager : MonoBehaviour
         Info.SetActive(false);
         Menu.SetActive(true);
     }
+
+    public void StepToLevels()
+    {
+        Levels.SetActive(true);
+        Rules.SetActive(false);
+        Info.SetActive(false);
+        Menu.SetActive(false);
+    }
+
+    public void StepToRules()
+    {
+        Levels.SetActive(false);
+        Rules.SetActive(true);
+        Info.SetActive(false);
+        Menu.SetActive(false);
+    }
+
+    public void StepToInfo()
+    {
+        Levels.SetActive(false);
+        Rules.SetActive(false);
+        Info.SetActive(true);
+        Menu.SetActive(false);
+    }
+
+    public void StepToPlay()
+    {
+        Levels.SetActive(false);
+        Rules.SetActive(false);
+        Info.SetActive(false);
+        Menu.SetActive(false);
+    }
 }
